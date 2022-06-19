@@ -16,36 +16,7 @@ export class PaginationComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    if (!this.max) this.max = 1;
-    if (this.max > 10) {
-      if (this.max > 500) this.max = 500; // => Attention, l'api ne prend pas les résultats supérieur a 500 ... !?
-      this.pagination.push({ index: 1, path: this.makeUrl(1) });
-      this.current > 3 && this.pagination.push({ index: 0, path: 'empty' });
-      this.current > 2 &&
-        this.pagination.push({
-          index: this.current - 1,
-          path: this.makeUrl(this.current - 1),
-        });
-      this.current > 1 &&
-        this.pagination.push({
-          index: this.current,
-          path: this.makeUrl(this.current),
-        });
-      this.current < this.max - 1 &&
-        this.pagination.push({
-          index: this.current + 1,
-          path: this.makeUrl(this.current + 1),
-        });
-      this.pagination.push({ index: 0, path: 'empty' });
-
-      this.pagination.push({ index: this.max, path: this.makeUrl(this.max) });
-    } else {
-      for (let i = this.min; i <= this.max; i += 1) {
-        this.pagination.push({ index: i, path: this.makeUrl(i) });
-      }
-    }
-    this.previous_path = this.makeUrl(this.current - 1);
-    this.next_path = this.makeUrl(this.current + 1);
+    this.makePagination();
   }
   makeUrl(index: number) {
     let path = this.route.snapshot.routeConfig
@@ -59,6 +30,37 @@ export class PaginationComponent implements OnInit {
     strArr.push(`page=${index}`);
     return path + '?' + strArr.join('&');
   }
+  makePagination() {
+    let cursor = 2;
+    let skip = this.current - cursor;
+
+    if (this.max > 500) {
+      this.max = 500; // API error if more than 500 pages
+    }
+    if (this.current > this.max) {
+      this.current = this.max;
+    }
+    if (this.current < this.min) {
+      this.current = this.min;
+    }
+    if (this.min + cursor < this.current && cursor * 2 > this.min) {
+      this.pagination.push({ index: 0, path: 'empty' });
+    }
+    if (skip < cursor) {
+      skip = this.min;
+    }
+    if (skip >= this.max - cursor - 1) {
+      skip = this.max - cursor * 2;
+    }
+    for (let i = skip; i <= skip + cursor * 2; i++) {
+      this.pagination.push({ index: i, path: this.makeUrl(i) });
+    }
+    if (this.current < this.max - cursor && cursor * 2 + 1 < this.max) {
+      this.pagination.push({ index: 0, path: 'empty' });
+    }
+    this.previous_path = this.makeUrl(this.current - 1);
+    this.next_path = this.makeUrl(this.current + 1);
+  }
 }
 
-// TODO Better pagination PLEASE !
+// TODO Seem's good, but maybe add last and first page ?
