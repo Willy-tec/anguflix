@@ -12,9 +12,4 @@ export class AppComponent {
 // TODO Recommendation
 // TODO Similar movie
 
-// TODO Now playing
-// TODO upcoming
-// TODO Popular
-// TODO Top rated
-
-// TODO Page
+// TODO Detailed Page
