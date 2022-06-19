@@ -1,0 +1,14 @@
+<div *ngIf="film.id" class="card">
+  <img class="card__poster" src="{{ url + film.poster_path }}" alt="" />
+  <div class="card__content">
+    <h2>{{ film.title }}</h2>
+    <h3>{{ film.tagline }}</h3>
+    <div *ngIf="film.genres">
+      <app-chips
+        *ngFor="let genre of film.genres"
+        [name]="genre.name"
+      ></app-chips>
+    </div>
+    <p>{{ film.overview }}</p>
+  </div>
+</div>

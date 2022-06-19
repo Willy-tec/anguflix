@@ -1,0 +1,29 @@
+<div class="pagination">
+  <ul>
+    <li>
+      <a
+        *ngIf="previous_path"
+        href="{{ previous_path }}"
+        [class.disable]="current === 1"
+        >&larr;
+      </a>
+    </li>
+    <li *ngFor="let page of pagination">
+      <a
+        *ngIf="page.index !== 0"
+        href="{{ page.path }}"
+        [class.active]="page.index === current"
+        >{{ page.index }}
+      </a>
+      <span *ngIf="page.index === 0">...</span>
+    </li>
+    <li>
+      <a
+        *ngIf="next_path"
+        href="{{ next_path }}"
+        [class.disable]="current >= max"
+        >&rarr;
+      </a>
+    </li>
+  </ul>
+</div>

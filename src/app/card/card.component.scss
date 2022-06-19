@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  margin: 16px;
+  width: auto;
+  &__poster {
+    border-radius: 6px;
+    margin-right: 8px;
+    width: 350px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    & h2 {
+      text-align: center;
+    }
+    & p {
+      padding: 8px;
+    }
+  }
+}
