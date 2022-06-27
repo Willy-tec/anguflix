@@ -13,9 +13,13 @@
         [name]="genre.name"
       ></app-chips>
     </div>
-    <p>{{ film.release_date }}</p>
-    <p>Note: {{ film.vote_average }}</p>
-    <p>Nombre de vote: {{ film.vote_count }}</p>
+    <p>Sortie le {{ film.release_date | date: "fullDate":"+0200":"fr" }}</p>
+    <app-rating [note]="film.vote_average"></app-rating>
+    <p>
+      {{ film.vote_average }} sur {{ film.vote_count }} vote{{
+        film.vote_count > 1 ? "s" : ""
+      }}
+    </p>
     <!-- <p>{{ film.overview }}</p> -->
   </div>
 </a>

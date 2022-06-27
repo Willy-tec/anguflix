@@ -1,0 +1,15 @@
+.star_container {
+  position: relative;
+  height: 18px;
+  width: fit-content;
+}
+.star {
+  &__full {
+    position: relative;
+    overflow: hidden;
+    top: -18px;
+  }
+  &__empty {
+    position: relative;
+  }
+}
