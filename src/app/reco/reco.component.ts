@@ -21,7 +21,6 @@ export class RecoComponent implements OnInit {
       .getRecoData({ id: this.movieId + '', type: this.type })
       .subscribe((data) => {
         this.movies = data.results;
-        console.log(data);
       });
   }
 }

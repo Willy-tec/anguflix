@@ -21,7 +21,6 @@ export class DetailViewComponent implements OnInit {
   getFilm(id: string) {
     this.fetchService.getFilmData({ id }).subscribe((data) => {
       this.movie = data;
-      console.log(this.movie);
     });
   }
 }
