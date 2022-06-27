@@ -1,4 +1,4 @@
-<div *ngIf="film.id" class="minicard">
+<a *ngIf="film.id" class="minicard" href="{{ detail_url }}">
   <img
     class="minicard__poster"
     src="{{ img_base_url + film.poster_path }}"
@@ -18,4 +18,4 @@
     <p>Nombre de vote: {{ film.vote_count }}</p>
     <!-- <p>{{ film.overview }}</p> -->
   </div>
-</div>
+</a>

@@ -1,9 +1,3 @@
-<p>
-  detail-view
-  works!fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-</p>
-<div *ngIf="movie">
-  {{ movie.title }}
-  coucou
-  <app-card [film]="movie"></app-card>
+<div class="detail">
+  <app-card *ngIf="movie" [film]="movie"></app-card>
 </div>

@@ -1,10 +1,11 @@
 .card {
   display: flex;
+  box-sizing: border-box;
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
   padding: 8px;
-  margin: 16px;
   width: auto;
+  background-color: white;
   &__poster {
     border-radius: 6px;
     margin-right: 8px;

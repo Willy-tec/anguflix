@@ -59,7 +59,7 @@ export class MockdataService {
     return 'https://image.tmdb.org/t/p/w500';
   }
 }
-const mockedConfig = {
+export const mockedConfig = {
   images: {
     base_url: 'http://image.tmdb.org/t/p/',
     secure_base_url: 'https://image.tmdb.org/t/p/',

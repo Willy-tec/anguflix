@@ -4,6 +4,7 @@ import { Movie, Popular } from './Types/Movie';
 import { Observable } from 'rxjs';
 import { TypeToFetch } from './type-to-fetch';
 import { LocaleEnum } from './locale-enum';
+import { mockedConfig } from './mockdata.service';
 @Injectable({
   providedIn: 'root',
 })
@@ -52,11 +53,13 @@ export class FetchMovieService {
     return this.http.get<Movie>(target_url.href, this.httpOptions);
   }
   getLittleImagePath() {
-    return 'https://image.tmdb.org/t/p/w154';
+    const size = mockedConfig.images.poster_sizes[2];
+    return `https://image.tmdb.org/t/p/${size}`;
   }
   getImagePath() {
-    return 'https://image.tmdb.org/t/p/w500';
+    const size = mockedConfig.images.poster_sizes[3];
+    return `https://image.tmdb.org/t/p/${size}`;
   }
 }
 
-// TODO Use new URL instead of .... strange thing
+// TODO Configuré les tailles selon l'écran ?
