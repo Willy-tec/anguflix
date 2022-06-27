@@ -1,3 +1,11 @@
 <div class="detail">
   <app-card *ngIf="movie" [film]="movie"></app-card>
+  <h2>Recommendations</h2>
+  <app-reco
+    *ngIf="movie"
+    [movieId]="movie.id"
+    [type]="'recommendations'"
+  ></app-reco>
+  <h2>Films similaires</h2>
+  <app-reco *ngIf="movie" [movieId]="movie.id" [type]="'similar'"></app-reco>
 </div>

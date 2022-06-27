@@ -14,6 +14,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { MinicardComponent } from './minicard/minicard.component';
 import localeFr from '@angular/common/locales/fr';
 import { RatingComponent } from './rating/rating.component';
+import { RecoComponent } from './reco/reco.component';
 registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ registerLocaleData(localeFr, 'fr');
     PaginationComponent,
     MinicardComponent,
     RatingComponent,
+    RecoComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

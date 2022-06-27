@@ -41,16 +41,21 @@ export class FetchMovieService {
     target_url.searchParams.set('page', String(page));
     return this.http.get<Popular>(target_url.href, this.httpOptions);
   }
-  getFilmData({
-    id,
-    locale = LocaleEnum.fr,
-  }: {
-    id?: string;
-    locale?: LocaleEnum;
-  }): Observable<Movie> {
+  getFilmData({ id }: { id?: string }): Observable<Movie> {
     const target_url = new URL(this.base_url);
     target_url.pathname = `3/movie/${id}`;
     return this.http.get<Movie>(target_url.href, this.httpOptions);
+  }
+  getRecoData({
+    id,
+    type,
+  }: {
+    id?: string;
+    type?: string;
+  }): Observable<Popular> {
+    const target_url = new URL(this.base_url);
+    target_url.pathname = `3/movie/${id}/${type}`;
+    return this.http.get<Popular>(target_url.href, this.httpOptions);
   }
   getLittleImagePath() {
     const size = mockedConfig.images.poster_sizes[2];
