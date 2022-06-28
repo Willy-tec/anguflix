@@ -4,7 +4,10 @@
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/src/assets/Gotham-Font/Gotham-Bold.otf") format("otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./assets/Gotham-Font/Gotham-Bold.otf");
 }
 @font-face {
   font-family: "Gotham Book";
@@ -44,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Gotham Ultra", sans-serif;
+  font-family: "Gotham Ultra", serif;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -62,6 +65,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   height: 100%;
   box-sizing: border-box;
+  font-family: "Gotham";
 }
 
 /* Sections

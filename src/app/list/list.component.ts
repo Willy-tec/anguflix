@@ -34,3 +34,7 @@ export class ListComponent implements OnInit {
     });
   }
 }
+
+// TODO Manage media query for phone
+// TODO Tag redirige vers recherche par genre
+// TODO Meilleures cartes détaillé
