@@ -13,6 +13,7 @@ export class CardComponent implements OnInit {
   url: string = '';
   ngOnInit(): void {
     this.getData();
+    console.log(this.film);
   }
   getData() {
     // this.film = this.data.getData();

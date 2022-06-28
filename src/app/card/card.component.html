@@ -3,6 +3,14 @@
   <div class="card__content">
     <h2>{{ film.title }}</h2>
     <h3>{{ film.tagline }}</h3>
+    <img
+      *ngIf="film.adult"
+      src="../../assets/18.jpg"
+      class="card__adult"
+      alt="Interdit au moins de 18"
+      width="64px"
+      height="64px"
+    />
     <div *ngIf="film.genres">
       <app-chips
         *ngFor="let genre of film.genres"
