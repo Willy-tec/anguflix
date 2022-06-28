@@ -1,44 +1,41 @@
 @font-face {
   font-family: "Gotham Black";
-  src: url("/src/assets/Gotham-Font/Gotham-Black.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-Black.otf");
 }
 @font-face {
   font-family: "Gotham";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
   src: url("./assets/Gotham-Font/Gotham-Bold.otf");
 }
 @font-face {
   font-family: "Gotham Book";
-  src: url("/src/assets/Gotham-Font/Gotham-BookItalic.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-BookItalic.otf");
   font-style: italic;
 }
 @font-face {
   font-family: "Gotham Light";
-  src: url("/src/assets/Gotham-Font/Gotham-Light.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-Light.otf");
 }
 @font-face {
   font-family: "Gotham Thin";
-  src: url("/src/assets/Gotham-Font/Gotham-Thin.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-Thin.otf");
 }
 @font-face {
   font-family: "Gotham Thin";
-  src: url("/src/assets/Gotham-Font/Gotham-ThinItalic.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-ThinItalic.otf");
   font-style: italic;
 }
 @font-face {
   font-family: "Gotham Ultra";
-  src: url("/src/assets/Gotham-Font/Gotham-UltraItalic.otf") format("otf");
+  src: url("./assets/Gotham-Font/Gotham-UltraItalic.otf");
   font-style: italic;
 }
 @font-face {
   font-family: "Gotham XLight";
-  src: url("/src/assets/Gotham-Font/Gotham-XLight.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-XLight.otf");
 }
 @font-face {
   font-family: "Gotham XLight";
-  src: url("/src/assets/Gotham-Font/Gotham-XLightItalic.otf") format("otf");
+  src: url("/src/assets/Gotham-Font/Gotham-XLightItalic.otf");
   font-style: italic;
 }
 h1,
@@ -47,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Gotham Ultra", serif;
+  font-family: "Gotham Ultra";
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
