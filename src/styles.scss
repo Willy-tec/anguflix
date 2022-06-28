@@ -1,27 +1,38 @@
 @font-face {
   font-family: "Gotham Black";
-  src: url("/src/assets/Gotham-Font/Gotham-Black.otf");
+  src: url("./assets/Gotham-Font/Gotham-Black.otf");
 }
 @font-face {
   font-family: "Gotham";
   src: url("./assets/Gotham-Font/Gotham-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/Gotham-Font/GothamBoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
 }
 @font-face {
   font-family: "Gotham Book";
-  src: url("/src/assets/Gotham-Font/Gotham-BookItalic.otf");
+  src: url("./assets/Gotham-Font/Gotham-BookItalic.otf");
   font-style: italic;
 }
 @font-face {
+  font-family: "Gotham Book";
+  src: url("./assets/Gotham-Font/GothamBook.ttf");
+}
+@font-face {
   font-family: "Gotham Light";
-  src: url("/src/assets/Gotham-Font/Gotham-Light.otf");
+  src: url("./assets/Gotham-Font/Gotham-Light.otf");
 }
 @font-face {
   font-family: "Gotham Thin";
-  src: url("/src/assets/Gotham-Font/Gotham-Thin.otf");
+  src: url("./assets/Gotham-Font/Gotham-Thin.otf");
 }
 @font-face {
   font-family: "Gotham Thin";
-  src: url("/src/assets/Gotham-Font/Gotham-ThinItalic.otf");
+  src: url("./assets/Gotham-Font/Gotham-ThinItalic.otf");
   font-style: italic;
 }
 @font-face {
@@ -30,21 +41,22 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "Gotham XLight";
-  src: url("/src/assets/Gotham-Font/Gotham-XLight.otf");
+  font-family: "Gotham Medium";
+  src: url("./assets/Gotham-Font/GothamMedium.ttf");
+}
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("./assets/Gotham-Font/GothamMediumItalic.ttf");
+  font-style: italic;
 }
 @font-face {
   font-family: "Gotham XLight";
-  src: url("/src/assets/Gotham-Font/Gotham-XLightItalic.otf");
-  font-style: italic;
+  src: url("./assets/Gotham-Font/Gotham-XLight.otf");
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Gotham Ultra";
+@font-face {
+  font-family: "Gotham XLight";
+  src: url("./assets/Gotham-Font/Gotham-XLightItalic.otf");
+  font-style: italic;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -62,7 +74,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   height: 100%;
   box-sizing: border-box;
-  font-family: "Gotham";
+  font-family: "Gotham Book";
 }
 
 /* Sections
