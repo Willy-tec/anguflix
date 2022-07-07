@@ -9,6 +9,7 @@ import { Movie } from '../Types/Movie';
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
+  providers:[FetchMovieService]
 })
 export class ListComponent implements OnInit {
   @Input() type: TypeToFetch = TypeToFetch.popular;

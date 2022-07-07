@@ -2,23 +2,29 @@
   font-size: 1em;
   width: 100%;
   height: 100%;
-  padding: 8px;
+  padding: 4px;
   display: block;
   box-sizing: border-box;
   text-decoration: none;
   color: black;
-  border: 1px solid black;
   outline: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 8px;
   background-color: white;
+  transition: transform 0.1s;
+
   &__poster {
-    width: 185px;
-    height: 278px;
+    width: 100%;
+    height: 392px;
     object-fit: cover;
     border-radius: 6px;
+    transition: height 0.1s;
+  }
+  &__content {
+    opacity: 0;
+    transform: scale(0);
   }
   & h2 {
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: "Gotham", sans-serif;
     margin: 0;
   }
@@ -29,5 +35,23 @@
     padding: 0;
     margin: 0;
     font-size: 0.8em;
+  }
+}
+
+.minicard:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0.1em rgba(0, 0, 0, 1);
+  transition: transform 0.1s;
+
+  .minicard__poster {
+    width: 195px;
+    height: 290px;
+    transition: height 0.1s;
+  }
+  .minicard__content {
+    opacity: 1;
+    transform: scale(1);
+    overflow-y: hidden;
+    transition: opacity 0.1s 0.1s;
   }
 }
